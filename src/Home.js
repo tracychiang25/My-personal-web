@@ -1,11 +1,11 @@
-import HeroImage from './components/HeroImage';
-import ButtonBases from './Test';
+import HeroImage from './HeroImage';
+import ButtonBases from './ButtonBase';
 
 function Home(){
     return(
         <>
          <HeroImage />
-         {/*<ButtonBases />*/}
+         <ButtonBases />
         </>
 
     )

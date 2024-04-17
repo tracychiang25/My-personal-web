@@ -5,16 +5,17 @@
   font-family: "Quicksand";
   color: #333;
 }
+
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 1500px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: black;
+  color: #f1356d;
 }
 .navbar .links {
   margin-left: auto;
@@ -32,6 +33,7 @@
   margin: 40px auto;
   padding: 20px;
 }
+
 .heroimage{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/HeroImage.jpg");
   height: 500px;
@@ -61,4 +63,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.animated-text span {
+  color: #f1356d;
+}
+
+.footer{
+  text-align: center;
+  padding: 15px;
+  background-color: #f1356d;
+  color:beige;
+}
+
+.selfie{
+  width: 500px;
+  height: auto;
+
+
 }

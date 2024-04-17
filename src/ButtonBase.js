@@ -4,23 +4,23 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import burger from './assets/burger.jpg';
-
+import selfie from './assets/selfie.jpg';
 
 const images = [
   {
-    url: '/assets/HeroImage.jpg',
-    title: 'Five Guys',
-    width: '30%',
+    url: selfie,
+    title: 'About me',
+    width: '33%',
   },
   {
-    url: '/assets/burger.jpg',
-    title: 'Burgers',
-    width: '30%',
+    url: burger,
+    title: 'Resume',
+    width: '33%',
   },
   {
-    url: '/assets/burger.jpg',
-    title: 'Camera',
-    width: '30%',
+    url: {},
+    title: 'Portfolio',
+    width: '34%',
   },
 ];
 
@@ -28,7 +28,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 200,
   [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
+    width: '100% !important', 
     height: 100,
   },
   '&:hover, &.Mui-focusVisible': {
@@ -107,6 +107,7 @@ export default function ButtonBases() {
               variant="subtitle1"
               color="inherit"
               sx={{
+                fontFamily:"Quicksand",
                 position: 'relative',
                 p: 4,
                 pt: 2,

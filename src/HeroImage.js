@@ -1,5 +1,5 @@
-import image from '../assets/HeroImage.jpg'
-import '../index.css';
+import image from './assets/HeroImage.jpg'
+import './index.css';
 import { ReactTyped } from "react-typed";
 
 function HeroImage() {
@@ -12,7 +12,8 @@ function HeroImage() {
         strings={[
           "developer",
           "dog lover",
-          "foodie"
+          "foodie",
+          "pescatarian"
         ]}
         typeSpeed={150}
         backSpeed={100}      
