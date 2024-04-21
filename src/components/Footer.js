@@ -1,4 +1,4 @@
-import './index.css';
+import '../index.css';
 import {Link} from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -10,9 +10,10 @@ function Footer(){
         <footer className="footer">
             <section>
                 <Link to="/"><FacebookIcon /></Link>
-                <Link to="/"><YouTubeIcon /></Link>
+                <Link to="https://youtube.com/@SuperA8520?si=l5E_U-WlR5qVeWFJ"><YouTubeIcon /></Link>
                 <Link to="https://www.linkedin.com/in/tracy-chiang-620b46177/"><LinkedInIcon /></Link>
-             </section>
+                <p>©2024 All rights reserved</p>
+            </section>
             
         </footer>
     )

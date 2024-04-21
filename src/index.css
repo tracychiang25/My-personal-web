@@ -71,14 +71,104 @@
 
 .footer{
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   background-color: #f1356d;
   color:beige;
 }
 
-.selfie{
-  width: 500px;
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.selfie {
+  padding:30px;
+  width:450px;
+}
+
+.aboutContent{
+  padding:20px;
+  width:350px
+}
+
+.Connect101{
+  padding: 30px;
+  width: 450px;
+}
+
+.resume {
+  margin: auto;
+  width: 60%;
+  height: 70%;
+}
+
+.resume h1{
+  text-align: center;
+ }
+ 
+ .contactInfo {
+  display: flex;
+  justify-content: center; 
+}
+
+ .contact {
+  display: flex;
+  text-align: center; 
+ }
+
+.contact p {
+  margin: 0 5px; 
+}
+
+.resume h3{
+ color:#f1356d;
+}
+
+.searchIcon{
+  font-size: '15px'
+}
+
+.container {
+  max-width: 500px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Add some padding to the sides */
+}
+
+
+.video-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  width: 100px; 
+  height: 300px;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.video-thumbnail {
+  width: 200px; 
   height: auto;
+  border-radius: 8px;
+}
 
+.grid-container {
+  padding: 20px 0; /* Add some padding to the grid container */
+}
 
+.video-list-container {
+  width: 50%;
+  margin: 0 auto; /* Center the container */
+}
+
+.video-page{
+    max-width: 500px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add some padding to the sides */
+  
 }

@@ -1,4 +1,4 @@
-import './index.css';
+import '../index.css';
 import Button from './button';
 import { useState } from 'react';
 import DehazeIcon from '@mui/icons-material/Dehaze';

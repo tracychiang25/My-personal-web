@@ -1,10 +1,10 @@
-import Navbar from './Navbar';
-import Home from './Home';
-import Resume from './Resume';
-import Portfolio from './Portfolio';
-import About from './About';
-import Footer from './Footer';
-import FavoriteColour from './FavoriteColour';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
+import About from './components/About';
+import Footer from './components/Footer';
+import VideoPage from './components/VideoPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -13,16 +13,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element = {<Home />} />
-        </Routes>
-        <Routes>
+          <Route path="/" element = {<Home />} />
           <Route path='/about' element = {<About />} />
-        </Routes>
-        <Routes>
           <Route path='/resume' element = {<Resume />} />
-        </Routes>
-        <Routes>
           <Route path='/portfolio' element = {<Portfolio />} />
+          <Route path="/portfolio/:videoId" element={<VideoPage />} />
         </Routes>
         <Footer />
       </Router>

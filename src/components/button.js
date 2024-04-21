@@ -11,8 +11,8 @@ function Button() {
 
   return (
     <div>
-      <button onClick={handleClick}>
-        {click ? <CloseIcon /> : <DehazeIcon />}
+      <button onClick={handleClick}> {/* handles hamburger menu sidebar*/}
+        {click ? <CloseIcon /> : <DehazeIcon />}  
       </button>
     </div>
   );

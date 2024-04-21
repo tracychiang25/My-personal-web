@@ -1,5 +1,5 @@
-import image from './assets/HeroImage.jpg'
-import './index.css';
+import image from '../assets/HeroImage.jpg'
+import '../index.css';
 import { ReactTyped } from "react-typed";
 
 function HeroImage() {
@@ -8,14 +8,15 @@ function HeroImage() {
   <div className='heroimage'>
     <div className="animated-text">
       I am a {' '}
-      <ReactTyped 
+      <ReactTyped  /*display texts in typing effect*/ 
         strings={[
           "developer",
           "dog lover",
           "foodie",
           "pescatarian"
         ]}
-        typeSpeed={150}
+        /*speed of the typing effects*/
+        typeSpeed={200} 
         backSpeed={100}      
         loop
       />

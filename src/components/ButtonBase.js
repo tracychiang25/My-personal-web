@@ -1,26 +1,31 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import burger from './assets/burger.jpg';
-import selfie from './assets/selfie.jpg';
+import resume from '../assets/resume.jpg';
+import me from '../assets/me.jpg';
+import portfolio from '../assets/portfolio.jpg';
 
 const images = [
   {
-    url: selfie,
+    url: me,
     title: 'About me',
     width: '33%',
+    link:'./About',
   },
   {
-    url: burger,
+    url: resume,
     title: 'Resume',
     width: '33%',
+    link:'./Resume',
   },
   {
-    url: {},
+    url: portfolio,
     title: 'Portfolio',
     width: '34%',
+    link:'./Portfolio',
   },
 ];
 
@@ -92,13 +97,14 @@ export default function ButtonBases() {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
-        <ImageButton
+          <ImageButton
           focusRipple
           key={image.title}
           style={{
             width: image.width,
           }}
-        >
+          >
+          <Link to={image.link}>
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
@@ -118,7 +124,9 @@ export default function ButtonBases() {
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>
+          </Link>
         </ImageButton>
+        
       ))}
     </Box>
   );
