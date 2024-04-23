@@ -6,6 +6,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import VideoPage from './components/VideoPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import GithubPage from './components/GithubPage';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
           <Route path='/about' element = {<About />} />
           <Route path='/resume' element = {<Resume />} />
           <Route path='/portfolio' element = {<Portfolio />} />
-          <Route path="/portfolio/:videoId" element={<VideoPage />} />
+          <Route path="/portfolio/video/:videoId" element={<VideoPage />} />
+          <Route path="/portfolio/github/:name" element={<GithubPage />} />
+
         </Routes>
         <Footer />
       </Router>

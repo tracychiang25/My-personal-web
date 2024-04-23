@@ -1,5 +1,6 @@
 import '../index.css';
 import { Link } from 'react-router-dom';
+import Github from './Github';
 
 function Resume(){
 
@@ -68,9 +69,6 @@ function Resume(){
             campus resources.</p><br />
             <h4>College of Excellent Feb 2023 – Present</h4>
             <p>• International Merit Scholarship holder.</p> <br />
-
-
-
         </div>
 
 
