@@ -113,7 +113,6 @@ function Portfolio() {
                 )}
                 {value === 1 && (
                     <div className="container">
-                        <h2>Github</h2>
                         <Github /> 
                     </div>
                 )}

@@ -5,12 +5,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import '../index.css';
 
 function About(){
-    const[count, setCount] = useState(0); //Initial click counts
-    const [size, setSize] = useState(17); //Initial size of the heart button
+    const[count, setCount] = useState(0); //Initial 0 as click counts
+    const [size, setSize] = useState(17); //Initial size 17 as the heart button
 
     const increaseSize = () => {
     setSize(size + 3); //Increase the size by 3 pixels each time the button is clicked
-    setCount(count +1);
+    setCount(count +1); //Counting how many times the button is clicked
   };
 
 return(

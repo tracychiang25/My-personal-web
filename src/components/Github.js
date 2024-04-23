@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
+import '../index.css';
 
 function Github() {
     const [data, setData] = useState([]);
@@ -29,6 +33,13 @@ function Github() {
         fetchApiData();
     }, []);
 
+    const Item = styled(Paper)(({ theme }) => ({
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+      }));
+
     return (
         <div>
             {loading ? (
@@ -36,13 +47,15 @@ function Github() {
             ) : error ? (
                 <p>Error: {error}</p>
             ) : (
-                <ul>
+                <div>
                     {data.map(repo => ( 
                     <Link to={`/portfolio/github/${repo.name}`} className="github-link"> 
-                    <li key={repo.id}>{repo.name}</li>            
+                    <Stack spacing={2} className="stack">
+                        <Item key={repo.id}>{repo.name}</Item> 
+                    </Stack>        
                     </Link> 
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );
