@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import { Grid, TextField } from '@mui/material';
-import YouTube from 'react-youtube';
 import '../index.css';
 import { Link } from 'react-router-dom';
+import Github from './Github';
 
-function Portfolio() {
+
+function Portfolio() {    
+    
+    /*Youtube API*/
+    const channelId = "UC9y_K3FB_aK_smTgg29BI2w";
+    const apiKey = process.env.REACT_APP_YOUTUBE_KEY;
+
     const [videos, setVideos] = useState([]);
     const [filteredVideos, setFilteredVideos] = useState([]);
     const [searchTitle, setSearchTitle] = useState('');
-
-    localStorage.clear();
+    // for the ui tabs
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
 
     useEffect(() => {
         const storedVideos = localStorage.getItem('videos');
         if (storedVideos) {
-            console.log("Here");
             setVideos(JSON.parse(storedVideos));
         } else {
             fetchVideos();
@@ -23,17 +34,16 @@ function Portfolio() {
 
     const fetchVideos = async () => {
         try {
-            const channelId = "UC9y_K3FB_aK_smTgg29BI2w";
-            const apiKey = process.env.REACT_APP_Y;
+           
             let nextPageToken = null;
             let allVideos = [];
-    
+            // Make a request to the YouTube Data API's search endpoint
             do {
-                let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&key=AIzaSyC1VP9xGwNeT0NC-BdQClDbz8xlcHq9MaU`;
+                let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&key=${apiKey}`;
                 if (nextPageToken) {
                     url += `&pageToken=${nextPageToken}`;
                 }
-    
+                // Fetch data from the url, throw an error if an unsuccessful response
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error("Failed to fetch videos.");
@@ -61,39 +71,54 @@ function Portfolio() {
         setSearchTitle(event.target.value);
     }
 
+
     return (
-        <div className="container">
-            <div className="w-full h-screen bg-[#0a192f]">
-                <div className="container mx-auto px-4 pt-20">
-                    <Grid container spacing={2} alignItems="center">
-                        <Grid item xs={12} sm={8}>
-                            <TextField
-                                fullWidth
-                                label="Search"
-                                variant="outlined"
-                                value={searchTitle}
-                                size="small"
-                                onChange={handleSearchChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                        </Grid>
-                    </Grid>
-                    <div className="video-list-container">
-                        <Grid container spacing={2} className="grid-container">
-                            {filteredVideos.map(video => (
-                            <Grid key={video.id.videoId} item xs={12} sm={6} md={4} lg={3}  className="video-container">
-                                <Link to={`/video/${video.id.videoId}`} className="video-link"> 
-                                <div className="video-title">{video.snippet.title}</div>
-                                <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} className="video-thumbnail" />
-                                </Link> 
+        <div className="portfolio">
+            <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+                <Tabs value={value} onChange={handleChange} centered>
+                    <Tab label="YouTube Videos" />
+                    <Tab label="GitHub" />
+                </Tabs>
+                {value === 0 && (
+                    <div>
+                        <div>
+                            <Grid container justifyContent="center">
+                            {/* Column widths are values between 1 and 12, 12 is the full width of its parent container */}
+                            {/* xs: screen width smaller than 600px , sm: screen width 600px-960px*/}
+                                <Grid item xs={12} sm={3} sx={{ margin:'30px'}}> 
+                                    <TextField
+                                        fullWidth
+                                        label="Search"
+                                        variant="outlined"
+                                        value={searchTitle}
+                                        size="small"
+                                        onChange={handleSearchChange}
+                                    />
+                                </Grid>
                             </Grid>
-                        ))}
-                        </Grid>
+                            <div className="video-list-container">
+                                <Grid container spacing={2} justifyContent="center">
+                                    {filteredVideos.map(video => (
+                                        <Grid key={video.id.videoId} item xs={12} sm={6} md={4} lg={3} sx={{ margin:'10px'}} className="video-container">
+                                            <Link to={`/portfolio/video/${video.id.videoId}`} className="video-link"> 
+                                                <div className="video-title">{video.snippet.title}</div>
+                                                <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} className="video-thumbnail" />
+                                            </Link> 
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                )}
+                {value === 1 && (
+                    <div className="container">
+                        <h2>Github</h2>
+                        <Github /> 
+                    </div>
+                )}
+            </Box>
+        </div> 
     );
 }
 

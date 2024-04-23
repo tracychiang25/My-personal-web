@@ -78,7 +78,6 @@
 
 .about{
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -130,9 +129,9 @@
 }
 
 .container {
-  max-width: 500px; /* Adjust max-width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0 20px; /* Add some padding to the sides */
+  max-width: 2000px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 
@@ -141,8 +140,9 @@
   border-radius: 8px;
   padding: 16px;
   background-color: #fff;
-  width: 100px; 
+  width: 500px; 
   height: 300px;
+  margin: 0px 10px 0px 10px; 
 }
 
 .video-title {
@@ -151,24 +151,38 @@
   margin-bottom: 8px;
 }
 
+.video-image{
+  text-align: center;
+}
+
 .video-thumbnail {
   width: 200px; 
   height: auto;
   border-radius: 8px;
 }
 
-.grid-container {
-  padding: 20px 0; /* Add some padding to the grid container */
-}
+
 
 .video-list-container {
   width: 50%;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
 }
 
 .video-page{
-    max-width: 500px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add some padding to the sides */
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
   
+}
+
+.github-code{
+  margin: 30px;
+}
+
+.github-card{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center; 
+
 }
