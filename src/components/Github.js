@@ -14,7 +14,7 @@ function Github() {
         const fetchApiData = async () => {
             try {
                 const response = await fetch('https://api.github.com/users/tracychiang25/repos');
-
+                // throw an error message when response is unsuccessful
                 if (!response.ok) {
                     throw new Error(`HTTP error, status ${response.status}`);
                 }

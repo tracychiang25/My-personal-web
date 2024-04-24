@@ -17,8 +17,8 @@ function Portfolio() {
     const [videos, setVideos] = useState([]);
     const [filteredVideos, setFilteredVideos] = useState([]);
     const [searchTitle, setSearchTitle] = useState('');
-    // for the ui tabs
-    const [value, setValue] = React.useState(0);
+    // for the UI tabs
+    const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };

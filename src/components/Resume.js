@@ -1,6 +1,5 @@
 import '../index.css';
 import { Link } from 'react-router-dom';
-import Github from './Github';
 
 function Resume(){
 

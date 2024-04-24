@@ -1,4 +1,3 @@
-import image from '../assets/HeroImage.jpg'
 import '../index.css';
 import { ReactTyped } from "react-typed";
 
