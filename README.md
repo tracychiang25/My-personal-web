@@ -9,8 +9,8 @@ The main purpose of this website is to showcase my resume and portfolio. It is b
 
 ## Features
 
-• About: A brief introduction about myself.
-• Resume: Provide my resume for potential employers.
+• About: A brief introduction about myself. \
+• Resume: Provide my resume for potential employers. \
 • Portfolio: Display all my projects, including programming endeavors on Github and video content on Youtube.
 
 ## Dependicies and how to install them
