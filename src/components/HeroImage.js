@@ -7,14 +7,14 @@ function HeroImage() {
   <div className='heroimage'>
     <div className="animated-text">
       I am a {' '}
-      <ReactTyped  /*display texts in typing effect*/ 
+      <ReactTyped  //Display texts in typing effect
         strings={[
           "developer",
           "dog lover",
           "foodie",
           "pescatarian"
         ]}
-        /*speed of the typing effects*/
+        //Speed of the typing effects
         typeSpeed={200} 
         backSpeed={100}      
         loop

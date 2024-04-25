@@ -9,14 +9,13 @@ import { Link } from 'react-router-dom';
 import IFN557 from '../assets/IFN557.jpg';
 import '../index.css';
 
-function GithubPage(){
+function GithubPage(props){
     
     const { name } = useParams();
     // My Github repository
     const githubUrl = `https://github.com/tracychiang25/${name}`; 
 
     return (
-        
         <div className="github-code">
             <div className="github-card">
             <Card sx={{ maxWidth: 345 }}>
@@ -26,14 +25,14 @@ function GithubPage(){
                     image= {IFN557}
                     alt="IFN557"
                 />
-                <CardContent>
+                <CardContent>                
                 <Typography gutterBottom variant="h5" component="div">{name}</Typography>
-                {/* Brief introduction of the work */}
+                {/* I didn't do it but feel free to add texts here if you would like to add description on the card*/}
                 <Typography variant="body2" color="text.secondary">
-                It is a e-commerce website created by HTML, python and bootstrap, etc.
                 </Typography>
                 </CardContent>
                 <CardActions>
+                    {/* Links to my Github page */}
                     <Link to={githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button size="small">Check the code</Button>
                     </Link>

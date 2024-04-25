@@ -8,6 +8,7 @@ import resume from '../assets/resume.jpg';
 import me from '../assets/me.jpg';
 import portfolio from '../assets/portfolio.jpg';
 
+//This component is using MUI library 
 const images = [
   {
     url: me,
@@ -85,7 +86,6 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
 
 const ImageMarked = styled('span')(({ theme }) => ({
   height: 3,
-  width: 18,
   backgroundColor: theme.palette.common.white,
   position: 'absolute',
   bottom: -2,

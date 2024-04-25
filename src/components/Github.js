@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import '../index.css';
+import GithubPage from './GithubPage';
 
 function Github() {
     const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ function Github() {
         const fetchApiData = async () => {
             try {
                 const response = await fetch('https://api.github.com/users/tracychiang25/repos');
-                // throw an error message when response is unsuccessful
+                // Throw an error message when response is unsuccessful
                 if (!response.ok) {
                     throw new Error(`HTTP error, status ${response.status}`);
                 }
@@ -52,12 +53,13 @@ function Github() {
                     <Link to={`/portfolio/github/${repo.name}`} className="github-link"> 
                     <Stack spacing={2} className="stack">
                         <Item key={repo.id}>{repo.name}</Item> 
-                    </Stack>        
+                    </Stack>
                     </Link> 
                     ))}
                 </div>
             )}
         </div>
+        
     );
 }
 

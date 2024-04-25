@@ -20,7 +20,6 @@ function App() {
           <Route path='/portfolio' element = {<Portfolio />} />
           <Route path="/portfolio/video/:videoId" element={<VideoPage />} />
           <Route path="/portfolio/github/:name" element={<GithubPage />} />
-
         </Routes>
         <Footer />
       </Router>
