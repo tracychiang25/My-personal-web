@@ -23,7 +23,7 @@ This will install all the dependencies that are included in the project: \
 react-router-dom \
 react-typed \
 react-youtube \
-@mui/icons-material @mui/material @emotion/styled @emotion/react @mui/material/styles \
+@mui/icons-material @mui/material @emotion/styled @emotion/react @mui/material/styles 
 
 
 Fianlly, run the project:

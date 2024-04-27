@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import '../index.css';
-import GithubPage from './GithubPage';
+
 
 function Github() {
     const [data, setData] = useState([]);
@@ -57,6 +57,7 @@ function Github() {
                     </Link> 
                     ))}
                 </div>
+                
             )}
         </div>
         

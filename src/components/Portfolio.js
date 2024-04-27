@@ -6,6 +6,7 @@ import { Grid, TextField } from '@mui/material';
 import '../index.css';
 import { Link } from 'react-router-dom';
 import Github from './Github';
+import CommitGraph from './CommitGraph';
 
 function Portfolio() {
     
@@ -121,6 +122,9 @@ function Portfolio() {
             {value === 1 && (
             <div className="container">
                 <Github />
+                <div>
+      <CommitGraph username="tracychiang25" />
+    </div>
             </div>
             )}
         </Box>

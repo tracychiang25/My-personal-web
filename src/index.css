@@ -93,6 +93,13 @@
   font-size: 20px;
 }
 
+.heart{
+  font-size: 17px; 
+  position: absolute;
+  top: 482px;
+  left: 980px;
+}
+
 .Connect101{
   padding: 30px;
   width: 450px;
@@ -184,6 +191,10 @@
 
 .github-code{
   margin: 30px;
+}
+
+.commitGraph{
+  width:450px;
 }
 
 .github-card{

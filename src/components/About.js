@@ -24,7 +24,7 @@ return(
             <br />
             <br />
             click me to send some love!-{">"}&nbsp;
-            <FavoriteIcon onClick={increaseSize} style={{ fontSize: `${size}px` }}/> {/*The heart button enlarges with each user click.*/}
+            <FavoriteIcon className="heart" onClick={increaseSize} style={{fontSize: `${size}px`}} /> {/*The heart button enlarges with each user click.*/}
             <p> you liked {count} times</p> {/*Also counts how many times user clicks on*/}
         
         </p>
