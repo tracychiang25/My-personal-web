@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-import IFN557 from '../assets/IFN557.jpg';
+import IFN557 from '../assets/IFN557.png';
 import '../index.css';
 
 function GithubPage(props){

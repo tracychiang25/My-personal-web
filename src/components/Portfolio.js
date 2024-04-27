@@ -9,7 +9,11 @@ import Github from './Github';
 import CommitGraph from './CommitGraph';
 
 function Portfolio() {
-    
+    //Change the title name
+    useEffect(() => {
+        document.title = "Portfolio";
+      }, []);
+
     const channelId = "UC9y_K3FB_aK_smTgg29BI2w"; // My Youtube channel's ID
     const API_KEY = process.env.REACT_APP_YOUTUBE_KEY; // API key for accessing the Youtube Data API
     const YOUTUBE_API_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&key=${API_KEY}`; //URL for my channel

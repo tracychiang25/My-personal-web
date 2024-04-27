@@ -1,7 +1,12 @@
 import '../index.css';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Resume(){
+
+    useEffect(() => {
+        document.title = "Resume";
+      }, []);
 
     return(
         <div className="resume">

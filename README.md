@@ -5,7 +5,10 @@ This website provides some personal information and details about my experiences
 
 ## Purpose and Contribution
 
-The main purpose of this website is to showcase my resume and portfolio. It is built using React for the frontend and Node.js for the backend.
+The main purpose of this website is to showcase my resume and portfolio. It is built using React for the frontend and Node.js for the backend.\
+Contribution can be made by fork and pull requests.\
+Details of how to fork a repository can be found here: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project \
+
 
 ## Features
 
@@ -23,7 +26,8 @@ This will install all the dependencies that are included in the project: \
 react-router-dom \
 react-typed \
 react-youtube \
-@mui/icons-material @mui/material @emotion/styled @emotion/react @mui/material/styles 
+@mui/icons-material @mui/material @emotion/styled @emotion/react @mui/material/styles \
+chart.js
 
 
 Fianlly, run the project:

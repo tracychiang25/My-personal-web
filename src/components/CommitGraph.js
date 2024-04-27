@@ -34,10 +34,10 @@ const GitHubCommitGraph = ({ username }) => {
 
   return (
     <div>
-      <h2>GitHub Commit Activity</h2>
+      <h2>GitHub Commit Activity 2023-2024</h2>
       <CalendarHeatmap className="commitGraph"
-        startDate={new Date('2023-01-01')} // Customize start date as needed
-        endDate={new Date()} // Use current date as end date
+        startDate={new Date('2023-01-01')} 
+        endDate={new Date()} //Use current date as end date
         values={commitData}
         classForValue={value => {
           if (!value) {

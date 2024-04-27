@@ -1,10 +1,15 @@
 import selfie from '../assets/selfie.jpg';
 import QUTConnect from '../assets/QUTConnect.jpg';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import '../index.css';
 
 function About(){
+
+    useEffect(() => {
+        document.title = "About";
+      }, []);
+    
     const[count, setCount] = useState(0); //Initial 0 as click counts
     const [size, setSize] = useState(17); //Initial size 17 as the heart button
 
