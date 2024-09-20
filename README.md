@@ -20,7 +20,9 @@ Details of how to fork a repository can be found here: https://docs.github.com/e
 
 Before you run this project, navigate to the project directory `cd repository` and install all dependicies:
 
-### `npm install`
+```
+npm install
+```
 
 This will install all the dependencies that are included in the project: \
 react-router-dom \
@@ -32,7 +34,9 @@ chart.js
 
 Fianlly, run the project:
 
-### `npm start`
+ ```
+ npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
