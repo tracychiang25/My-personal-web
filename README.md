@@ -7,7 +7,7 @@ This website provides some personal information and details about my experiences
 
 The main purpose of this website is to showcase my resume and portfolio. It is built using React for the frontend and Node.js for the backend.\
 Contribution can be made by fork and pull requests.\
-Details of how to fork a repository can be found here: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project \
+Details of how to fork a repository can be found here: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project 
 
 
 ## Features
@@ -45,4 +45,4 @@ This website adopts a component-based architecture where each component manages 
 ## Issues report
 
 Please don't hesitate to reach out if you encounter any issues or have concerns regarding the website. \
-Email: n11404680@qut.edu.au
+Email: hsinyen19@gmail.com
